@@ -121,6 +121,7 @@ const showExample = function (code) {
 
 const convert = function () {
   let curlCode = document.getElementById('curl-code').value
+  curlCode = curlCode.replace(/^\s*[\r\n]/gm, "")
   let generatedCode
   let error
   const language = getLanguage()
